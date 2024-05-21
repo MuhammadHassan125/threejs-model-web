@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../style/style.css" />
+    <link rel="stylesheet" href="../../style/collapseStyle.css" />
+    <script src="../../js/reference.js"></script>
+    <script src="../../js/callapse.js"></script>
+  </head>
+  <body>
+    <section class="main-section">
+      <!-- sidebar  -->
+      <div class="sidebar">
+        <!-- <h1>sidebar code</h1> -->
+        <div class="navigate-back">
+          <i class="fa-solid fa-arrow-left primary-color"></i>
+          <h3 class="primary-color roboto-regular">Back</h3>
+        </div>
+
+        <!-- tooth selection dropdown  -->
+        <div class="dropdown">
+          <div onclick="myFunction()" class="dropbtn">
+            <h4 class="roboto-regular">Clean Up</h4>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div id="myDropdown" class="dropdown-content">
+            <a onclick="mySelectFunction()" class="roboto-regular dropbtn">
+              <i class="fa-solid fa-arrow-pointer primary-btn-color"></i
+              >Select</a
+            >
+            <div id="mySelectDropdown" class="dropdown-content">
+              <div class="selection-content">
+                <div class="dropbtn">
+                  <h4 class="roboto-regular">Lasso</h4>
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+              </div>
+              <div class="select-options">
+                <a class="roboto-regular">Brush</a>
+                <a class="roboto-regular">Selection Slider</a>
+              </div>
+            </div>
+            <a class="roboto-regular">
+              <i class="fa-solid fa-trash primary-btn-color"></i> Remove</a
+            >
+            <a class="roboto-regular">
+              <i class="fa-solid fa-square-plus primary-btn-color"></i>Add</a
+            >
+            <a class="roboto-regular">
+              <i class="fa-solid fa-mountain primary-btn-color"></i>View
+              Charger</a
+            >
+          </div>
+        </div>
+
+        <!-- horse show dropdown code  -->
+        <div class="dropdown">
+          <div onclick="horseShoeFunction()" class="dropbtn">
+            <h4 class="roboto-regular">Horse Shoe</h4>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div id="myHorseShoe" class="dropdown-content">
+            <div class="horse-shoe">
+              <span class="roboto-regular primary-color"
+                >Select Horse Shoe(HS) or Full Palate(FP)</span
+              >
+
+              <div>
+                <input
+                  type="radio"
+                  id="html"
+                  name="fav_language"
+                  value="HTML"
+                />
+                <label for="html" class="roboto-regular primary-color"
+                  >Horse Shoe</label
+                ><br />
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  id="html"
+                  name="fav_language"
+                  value="HTML"
+                />
+                <label for="html" class="roboto-regular primary-color"
+                  >Full Plate</label
+                ><br />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trim Scan height dreopdown code  -->
+        <div class="dropdown">
+          <div onclick="TrimScanFunction()" class="dropbtn">
+            <h4 class="roboto-regular">Trim Scan height</h4>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div id="trimScan" class="dropdown-content">
+            <span class="roboto-regular primary-color"
+              >Distance away from gum line</span
+            >
+            <div>
+              <input
+                type="range"
+                min="1"
+                max="100"
+                value="50"
+                style="width: 80%"
+              />
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  color: #ffffff;
+                "
+              >
+                <h5 class="roboto-regular">1mm</h5>
+                <h5 class="roboto-regular">5mm</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Base type dropdown code -->
+        <div class="dropdown">
+          <div onclick="baseFunction()" class="dropbtn">
+            <h4 class="roboto-regular">Base Type</h4>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div id="myBase" class="dropdown-content">
+            <div class="horse-shoe" style="display: flex; align-items: center;">
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                  </label>
+                  <h4 class="roboto-regular" style="color: #ffffff;">Hollow</h4>
+
+            </div>
+          </div>
+        </div>
+
+
+         <!-- Base height dropdown code -->
+         <div class="dropdown">
+            <div onclick="baseHeightFunction()" class="dropbtn">
+              <h4 class="roboto-regular">Base Height</h4>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div id="myBaseHeight" class="dropdown-content">
+              <div class="horse-shoe" style="display: flex; align-items: center;">
+                <div>
+                    <input
+                      type="range"
+                      min="1"
+                      max="100"
+                      value="50"
+                      style="width: 80%"
+                    />
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        color: #ffffff;
+                      "
+                    >
+                      <h5 class="roboto-regular">1mm</h5>
+                      <h5 class="roboto-regular">5mm</h5>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Darin Holes dropdown code -->
+          <div class="dropdown">
+            <div onclick="drainFunction()" class="dropbtn">
+              <h4 class="roboto-regular">Drain Holes</h4>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div id="myDrain" class="dropdown-content">
+              <div class="horse-shoe" style="display: flex; align-items: center;">
+                  <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider round"></span>
+                    </label>
+                    <h4 class="roboto-regular" style="color: #ffffff;">YES</h4>
+  
+              </div>
+            </div>
+          </div>
+
+        <!-- bottom sidebar button  -->
+        <button class="finish-btn">Finish Selection</button>
+
+        <!-- logo bottom  -->
+        <div style="margin: 30px 0">
+          <img src="../../images/logo.png" />
+        </div>
+      </div>
+
+      <!-- main content  -->
+      <div class="main-content">
+        <img src="../../images//content-img.png" />
+      </div>
+    </section>
+  </body>
+</html>
